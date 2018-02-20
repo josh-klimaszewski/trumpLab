@@ -1,12 +1,23 @@
 (function() {
  var mainComponent= {
     template: `
-    <p>hello world</p>
+        <div class="container">
+            <h2>Did Trump Really Say That?!?!?</h2>
+            <p> {{ $ctrl.data.value }}</p>
+        <div>
+        
     `,
+    controller: function(DataService) {
+        var $ctrl = this;
+        DataService.getTrumpQuote()
+                   .then(function(data) {
+                       $ctrl.data = data;
+                       console.log(data)
+                   })
+    }
 
  }
-
-    controller: 
+    
  angular
  .module("app")
  .component("mainComponent", mainComponent);
