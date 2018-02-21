@@ -1,24 +1,26 @@
 (function() {
- var mainComponent= {
+  var mainComponent = {
     template: `
-        <div class="container">
-            <h2>Did Trump Really Say That?!?!?</h2>
-            <p> {{ $ctrl.data.value }}</p>
-        <div>
-        
-    `,
+         <div>
+          <h1>Did Trump Really Say That?!?!?</h1>
+          <div class="main">
+            <img src="photo/dogInWig.jpg" alt="Trump Dog">
+            <p class="quote">"{{ $ctrl.data.value }}"</p>
+          </div>
+       </div>
+     `,
     controller: function(DataService) {
-        var $ctrl = this;
-        DataService.getTrumpQuote()
-                   .then(function(data) {
-                       $ctrl.data = data;
-                       console.log(data)
-                   })
+      var $ctrl = this;
+      DataService.getTrumpQuote()
+        .then(function(data) {
+          $ctrl.data = data;
+
+        })
     }
 
- }
-    
- angular
- .module("app")
- .component("mainComponent", mainComponent);
+  }
+
+  angular
+    .module("app")
+    .component("mainComponent", mainComponent);
 })();

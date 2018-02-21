@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f2f0;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Oswald";
+  border-bottom: 20px solid black;
+  font-size: 40px;
+  padding-bottom: 25px;
+}
+
+nav {
+  background-color: black;
+  width: 1280px;
+  margin: 20px auto;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f2f0;
+  font-family: "Montserrat";
+  border-right: 1px solid #f3f2f0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+nav a:last-child  {
+  border: none;
+}
+
+.main img {
+  width: 50%;
+  height: auto;
+  float: left;
+  margin: 10px;
+}
+
+.quote {
+  text-align: left;
+  margin-top: 8px;
+}
+
+.main {
+  border: 5px solid black;
+  width: 50%;
+  min-height: 225px;
+  padding: 20px;
+  margin: 20px auto;
+  font-size: 20px;
+  font-family: "Montserrat";
+}
+
+/* game style */
+.container {
+  margin: 20px auto;
+  font-family: "Montserrat";
+  font-size: 20px;
+  color: black;
+}
+
+.howTo{
+  margin: 0 auto;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+button{
+  border: 2px solid black;
+  width: 25%;
+  height: 30px;
+  font-size: 15px;
+}
