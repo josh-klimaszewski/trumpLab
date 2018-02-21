@@ -10,7 +10,7 @@ body {
 
 h1 {
   font-family: "Oswald";
-  border-bottom: 20px solid black;
+  border-bottom: 20px solid rgb(209, 11, 11);
   font-size: 40px;
   padding-bottom: 25px;
 }
