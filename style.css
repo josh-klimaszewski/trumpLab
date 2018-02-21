@@ -10,7 +10,7 @@ body {
 
 h1 {
   font-family: "Oswald";
-  border-bottom: 20px solid rgb(209, 11, 11);
+  border-bottom: 20px solid black;
   font-size: 40px;
   padding-bottom: 25px;
 }
@@ -58,6 +58,7 @@ nav a:last-child  {
 
 /* game style */
 .container {
+  
   margin: 20px auto;
   font-family: "Montserrat";
   font-size: 20px;
@@ -68,6 +69,11 @@ nav a:last-child  {
   margin: 0 auto;
   font-size: 11px;
   letter-spacing: 2px;
+}
+#newQuote {
+  border: 5px solid black;
+  width: 50%;
+  
 }
 
 button{

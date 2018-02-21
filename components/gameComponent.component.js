@@ -2,23 +2,32 @@
   var gameComponent = {
     template: `
          <h1>Did Trump Really Say That?!?!?</h1>
-         <div class="container">
-          <button type="submit">Generate Even Dumber Quote</button>
-          <p class="howTo" >Click button for amount of words in quote</p>
-          <form>
-            <ul ng-repeat="data in $ctrl.newData">
-              <li> {{ data.value }} </li>
-            </ul>
-          </form>
+        <div class="container" id="newQuote">
+          
+            <span ng-repeat="array in $ctrl.newArray track by $index">
+               {{ array }} 
+            </span>
+          
         </div>
             `,
     controller: function(TrumpService) {
 
       var $ctrl = this;
-      $ctrl.newData = TrumpService.buildArray();
-      console.log($ctrl.newData)
+      for (i = 1; i <= 10; i++) {
+      TrumpService.getTrumpQuote()
+        .then(function(data) {
+          $ctrl.data = data.value;
+          TrumpService.addQuote($ctrl.data);
+          
+        });
+      }
+       
 
-
+         $ctrl.newArray = TrumpService.getTrumpWordArray();
+        
+      
+        
+        
 
 
     }
