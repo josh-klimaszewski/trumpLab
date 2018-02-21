@@ -9,9 +9,9 @@
           </div>
        </div>
      `,
-    controller: function(DataService) {
+    controller: function(TrumpService) {
       var $ctrl = this;
-      DataService.getTrumpQuote()
+      TrumpService.getTrumpQuote()
         .then(function(data) {
           $ctrl.data = data.value;
 

@@ -27,7 +27,7 @@
           var spacePosition = quote.indexOf(" ");
           var cutQuote = quote.substr(0, spacePosition);
           trumpWordArray.push(cutQuote);
-          cutQuote = [];
+          
 
       }
       
